@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+/build/
+
+# Test and coverage output
+coverage/
+
+# Local environment files (keep the example template)
+.env*
+!.env.example
+
+# Logs and local tool output
+*.log
+npm-debug.log*
+.DS_Store

@@ -1,0 +1,4 @@
+import type { Build } from "./optimizer";
+function save(content: string, filename: string, type: string) { const blob = new Blob([content], { type }); const url = URL.createObjectURL(blob); const link = document.createElement("a"); link.href = url; link.download = filename; link.click(); URL.revokeObjectURL(url); }
+export function downloadBuildJson(build: Build) { save(JSON.stringify(build, null, 2), "forge-build.json", "application/json"); }
+export function downloadBuildCsv(build: Build) { const rows = [["Categoria", "Componente", "Specifiche", "Prezzo EUR"], ...Object.entries(build.components).map(([category, component]) => [category, component.name, component.shortSpec, String(component.price)])]; save(rows.map((row) => row.map((value) => `"${value.replaceAll('"', '""')}"`).join(";")).join("\n"), "forge-build.csv", "text/csv;charset=utf-8"); }
