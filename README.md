@@ -2,6 +2,8 @@
 
 Forge is an early-stage web prototype for creating example PC builds in euros. Its interface, product catalog, compatibility rules, build generator, and export features are kept separate so the local catalog can later be replaced with a database and authorized data sources.
 
+> Created by **G4B7BB0** using a **vibe-coding workflow**.
+
 ## Getting started
 
 Requirements: Node.js 20 or newer and npm.
